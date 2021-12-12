@@ -6,5 +6,10 @@ class AdventOfCode : CliktCommand() {
 }
 
 fun main(args: Array<String>) {
-    AdventOfCode().subcommands(DayOneA(), DayOneB()).main(args)
+    AdventOfCode()
+        .subcommands(
+            DayOneA(), DayOneB(),
+            DayTwoA()
+        )
+        .main(args)
 }
