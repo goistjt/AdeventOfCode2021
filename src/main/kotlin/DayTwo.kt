@@ -21,3 +21,27 @@ class DayTwoA : CliktCommand() {
         echo(x*y)
     }
 }
+
+class DayTwoB : CliktCommand() {
+    val fileName by argument()
+
+    override fun run() {
+        val vectors = File(fileName).readLines().map { it.split(" ") }
+        var x = 0
+        var y = 0
+        var aim = 0
+        vectors.forEach {
+            val size = it[1].toInt()
+            when(it[0]) {
+                "forward" -> {
+                    x += size
+                    y += aim * size
+                }
+                "up" -> aim -= size
+                "down" -> aim += size
+            }
+        }
+
+        echo(x*y)
+    }
+}
