@@ -9,7 +9,8 @@ fun main(args: Array<String>) {
     AdventOfCode()
         .subcommands(
             DayOneA(), DayOneB(),
-            DayTwoA(), DayTwoB()
+            DayTwoA(), DayTwoB(),
+            DayThreeA()
         )
         .main(args)
 }

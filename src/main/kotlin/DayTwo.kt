@@ -27,9 +27,7 @@ class DayTwoB : CliktCommand() {
 
     override fun run() {
         val vectors = File(fileName).readLines().map { it.split(" ") }
-        var x = 0
-        var y = 0
-        var aim = 0
+        var (x, y, aim) = listOf(0, 0, 0)
         vectors.forEach {
             val size = it[1].toInt()
             when(it[0]) {
